@@ -1,0 +1,43 @@
+<div class="cm-modal">
+  <div class="cm-modal-header">
+    <span>
+      Details of {{contact.name}}
+    </span>
+  </div>
+  <div class="cm-modal-body detail-modal">
+    <div class="thumbnail">
+      <a href="#/contacts/{{contact.id}}"><img class="cm-card-image" ng-src="{{contact.imageUrl}}"></a>
+    </div>
+
+    <div class="cm-divider"></div>
+
+    <div class="clearfix col-xs-12">
+      <label class="key col-xs-3">Name</label>
+      <label class="value col-xs-9">{{contact.name}}</label>
+    </div>
+    <div class="clearfix col-xs-12">
+      <label class="key col-xs-3">Email</label>
+      <label class="value col-xs-9">{{contact.email}}</label>
+    </div>
+    <div class="clearfix col-xs-12">
+      <label class="key col-xs-3">Telephone</label>
+      <label class="value col-xs-9">{{contact.telephone}}</label>
+    </div>
+    <div class="clearfix col-xs-12">
+      <label class="key col-xs-3">City</label>
+      <label class="value col-xs-9">{{contact.city}}</label>
+    </div>
+    <div class="clearfix col-xs-12">
+      <label class="key col-xs-3">State</label>
+      <label class="value col-xs-9">{{contact.state}}</label>
+    </div>
+    <div class="clearfix col-xs-12">
+      <label class="key col-xs-3">Country</label>
+      <label class="value col-xs-9">{{contact.country}}</label>
+    </div>
+    <div class="clearfix col-xs-12">
+      <label class="key col-xs-3">PIN</label>
+      <label class="value col-xs-9">{{contact.pin}}</label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name" : "Alfreds Futterkiste",
+      "email": "alfred@gmail.com",
+      "telephone": "1122332244",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pin": "580003"
+    },
+    {
+      "id": 2,
+      "name" : "Berglunds snabbköp",
+      "email": "alfred@gmail.com",
+      "telephone": "1122332244",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pin": "580003"
+
+    },
+    {
+      "id": 3,
+      "name" : "Centro comercial Moctezuma",
+      "email": "alfred@gmail.com",
+      "telephone": "1122332244",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pin": "580003"
+    },
+    {
+      "id": 4,
+      "name" : "Ernst Handel",
+      "email": "alfred@gmail.com",
+      "telephone": "1122332244",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pin": "580003"
+    },
+    {
+      "id": 5,
+      "name" : "FISSA Fabrica Inter. Salchichas S.A.",
+      "email": "alfred@gmail.com",
+      "telephone": "1122332244",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pin": "580003"
+    },
+    {
+      "id": 6,
+      "name" : "Alfreds Futterkiste",
+      "email": "alfred@gmail.com",
+      "telephone": "1122332244",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pin": "580003"
+    },
+    {
+      "id": 7,
+      "name" : "Berglunds snabbköp",
+      "email": "alfred@gmail.com",
+      "telephone": "1122332244",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pin": "580003"
+
+    },
+    {
+      "id": 8,
+      "name": "Centro comercial Moctezuma",
+      "email": "alfred@gmail.com",
+      "telephone": "1122332244",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pin": "580003"
+    }
+  ]
+}

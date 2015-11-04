@@ -1,0 +1,52 @@
+<html lang="en" ng-app="contactManagerApp">
+<head>
+  <meta charset="utf-8">
+  <title>Contact Manager App</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/modal.css">
+
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/form.js"></script>
+
+</head>
+<body>
+  <div class="cm-navbar cm-navbar-default cm-navbar-docked">
+    <a class="logo" href="#/contacts">Contact Manager</a>
+    <div class="search">
+      <div class="input-search">
+        <input type="text" class="form-control" placeholder="Contact Search" ng-model="name"
+          ng-change="searchContact()">
+        </input>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="dropdown">
+        <a class="dropdown-toggle">
+          <span class="fa fa-user"></span>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li><a>Hello Guest</a></li>
+          <li class="divider"></li>
+          <li><a>Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
+  </div>
+
+</body>
+</html>

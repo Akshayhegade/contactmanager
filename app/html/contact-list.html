@@ -1,0 +1,25 @@
+<div>
+  <span class="add-contact fa fa-plus" ng-click="addEditContact()"></span>
+</div>
+<div class="cm-cards">
+  <div class="cm-card" ng-repeat="contact in contacts" ng-click="showContact(contact)">
+    <div class="pull-right edit-contact">
+      <span class="fa fa-pencil" ng-click="addEditContact(contact); $event.stopPropagation()"></span>
+    </div>
+    <span>
+      <a href="#/contacts/{{contact.id}}"><img class="cm-card-image" ng-src="{{contact.imageUrl}}"></a>
+    </span>
+    <h5>{{contact.name}}</h5>
+    <div>
+      <span class="fa fa-envelope"></span>
+      <span class="cm-card-bold">{{contact.email}}</span>
+    </div>
+    <div>
+      <span class="fa fa-phone"></span>
+      <span class="cm-card-bold">{{contact.telephone}}</span>
+    </div>
+    <div class="pull-right delete-contact">
+      <span class="fa fa-trash" ng-click="deleteContact(contact); $event.stopPropagation()"></span>
+    </div>
+  </div>
+</div>

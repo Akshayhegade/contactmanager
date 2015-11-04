@@ -1,0 +1,35 @@
+
+.cm-modal-header {
+  height: 44px;
+  background-color: #edeff0;
+  padding: 10px 10px 10px 20px;
+  font-size: 18px;
+  color: #232323;
+}
+
+.cm-modal-header:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+
+.cm-modal-body {
+  padding: 10px 20px;
+}
+
+.cm-modal-800 .modal-content {
+  width: 800px;
+}
+
+.thumbnail {
+  border: 0px !important;
+}
+
+.detail-modal {
+  height: 400px !important;
+}
+
+.detail-modal .key {
+  color: #666666;
+}
