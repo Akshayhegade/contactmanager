@@ -1,0 +1,19 @@
+<div class="cm-modal">
+  <div class="cm-modal-header">
+    <span>
+      Delete  {{contact.name}} ??
+    </span>
+  </div>
+  <div class="cm-modal-body">
+    Are you sure, you want to delete contact of {{contact.name}} ?
+  </div>
+
+  <div class="cm-modal-footer">
+    <button class="btn btn-danger" ng-click="deleteContact()">
+      <span>Delete</span>
+    </button>
+    <button class="btn btn-txt" ng-click="cancel()">
+      <span>Cancel</span>
+    </button>
+  </div>
+</div>
