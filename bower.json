@@ -1,8 +1,8 @@
 {
-  "name": "angular-phonecat",
-  "description": "A starter project for AngularJS",
+  "name": "Contact Manager",
+  "description": "Contact Manager Application using AngularJS",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-phonecat",
+  "homepage": "https://github.com/Akshayhegade/contactmanager",
   "license": "MIT",
   "private": true,
   "dependencies": {
