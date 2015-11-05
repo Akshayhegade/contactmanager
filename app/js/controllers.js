@@ -18,6 +18,22 @@ contactManagerControllers.controller('ContactListCtrl', function($scope, $rootSc
     return "img/" + imgNo++ % 6 + ".jpg";
   }
 
+  $scope.searchContact = function (contact) {
+    if ($scope.searchText == undefined || contact.name == undefined) {
+      return true;
+    }
+
+    return (contact.name.toLowerCase().indexOf($scope.searchText.toLowerCase()) > -1) ||
+      contact.email.toLowerCase().indexOf($scope.searchText.toLowerCase()) > -1;
+  }
+
+  $rootScope.$watch('name.value', function(newVal, oldVal) {
+    if (newVal == oldVal) {
+      return;
+    }
+    $scope.searchText = newVal;
+  });
+
   $scope.showContact = function(contact) {
     var modalInstance = $modal.open({
       templateUrl: 'html/contact-detail.html',
@@ -60,7 +76,16 @@ contactManagerControllers.controller('ContactListCtrl', function($scope, $rootSc
 contactManagerControllers.controller('ContactAddEditCtrl', function($scope, contacts, contact, $modalInstance) {
   $scope.contact = contact || {};
 
-  $scope.addContact = function() {
+  $scope.addUpdateContact = function(isValid) {
+    if (!isValid) {
+      alert("Form is invalid");
+      return;
+    }
+
+    if ($scope.contact.id != undefined) {
+      $scope.updateContact();
+    }
+
     contacts.push($scope.contact);
     $scope.contact.id = contacts.length;
     $scope.contact.imageUrl =  "img/" + $scope.contact.id  % 6 + ".jpg";

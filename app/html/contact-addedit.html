@@ -6,30 +6,36 @@
     </span>
   </div>
   <div class="cm-modal-body">
-    <form name="iform" class="form-horizontal" cm-form-validator="iform" validator="iformValidator" novalidate>
-      <div class="clearfix form-group">
+    <form name="contactForm" class="form-horizontal" ng-submit="addUpdateContact(contactForm.$valid)" novalidate>
+      <div class="clearfix form-group" ng-class="{ 'has-error' : contactForm.contactName.$invalid && !contactForm.ContactName.$pristine}">
         <label class="col-xs-3 control-label">Name</label>
         <div class="col-xs-9">
           <input type="text" name="contactName" ng-model="contact.name" class="form-control"
             placeholder="Full Name" required ng-maxlength="255">
-          <!--<div cm-field-error field="iform.contactName"></div>-->
+          <p ng-show="contactForm.contactName.$invalid && !contactForm.contactName.$pristine" class="help-block">
+            Name is required
+          </p>
         </div>
       </div>
 
-      <div class="clearfix form-group">
+      <div class="clearfix form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine}">
         <label class="col-xs-3 control-label">Email Address</label>
         <div class="col-xs-9">
           <input type="email" name="email" ng-model="contact.email" class="form-control"
-            placeholder="Email Address" required>
-          <!--<div cm-field-error field="iform.email"></div>-->
+            placeholder="Email Address">
+          <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">
+            Enter a valid Email
+          </p>
         </div>
       </div>
 
-      <div class="clearfix form-group">
+      <div class="clearfix form-group" ng-class="{ 'has-error' : contactForm.telephone.$invalid && !contactForm.telephone.$pristine }">
         <label class="col-xs-3 control-label">Telephone Number</label>
         <div class="col-xs-9">
-          <input type="text" ng-model="contact.telephone" class="form-control"
-            placeholder="Telephone Number"  ng-maxlength="15">
+          <input type="text" name="telephone" ng-model="contact.telephone" class="form-control"
+            placeholder="Telephone Number" ng-minlength="10" ng-maxlength="15">
+          <p ng-show="contactForm.telephone.$error.minlength" class="help-block">Telephone number is too short(length should be between 10 and 15)</p>
+          <p ng-show="contactForm.telephone.$error.maxlength" class="help-block">Telephone number is too long (length should be between 10 and 15)</p>
         </div>
       </div>
 
@@ -63,12 +69,11 @@
 
       <div class="form-group">
         <div class="col-xs-offset-3 col-xs-6">
-          <button class="btn btn-primary" ng-click="addContact()" ng-if="!contact.id">
-            <span> Create </span>
+          <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">
+            <span ng-if="!contact.id">Create</span>
+            <span ng-if="!!contact.id">Update</span>
           </button>
-          <button class="btn btn-primary" ng-click="updateContact()" ng-if="!!contact.id">
-            <span> Update </span>
-          </button>
+
           <button class="btn cm-btn-text" ng-click="cancel()">
             <span>Cancel</span>
           </button>

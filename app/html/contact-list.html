@@ -2,7 +2,7 @@
   <span class="add-contact fa fa-plus" ng-click="addEditContact()"></span>
 </div>
 <div class="cm-cards">
-  <div class="cm-card" ng-repeat="contact in contacts" ng-click="showContact(contact)">
+  <div class="cm-card" ng-repeat="contact in contacts | filter:searchContact" ng-click="showContact(contact)">
     <div class="pull-right edit-contact">
       <span class="fa fa-pencil" ng-click="addEditContact(contact); $event.stopPropagation()"></span>
     </div>

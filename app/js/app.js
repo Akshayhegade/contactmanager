@@ -6,8 +6,7 @@ var contactManagerApp = angular.module('contactManagerApp', [
   'ngRoute',
   'ui.bootstrap',
   'contactManagerControllers',
-  'contactManagerServices',
-  'cm-form'
+  'contactManagerServices'
 ]);
 
 contactManagerApp.config(['$routeProvider',
@@ -20,7 +19,5 @@ contactManagerApp.config(['$routeProvider',
   }]);
 
 contactManagerApp.run(function($rootScope) {
-    $rootScope.searchContact = function() {
-      console.warn($rootScope.name.value);
-    }
+  $rootScope.name = {value: ""};
 });
