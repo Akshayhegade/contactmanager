@@ -2,85 +2,85 @@
   "contacts": [
     {
       "id": 1,
-      "name" : "Alfreds Futterkiste",
-      "email": "alfred@gmail.com",
+      "name" : "Tom Cruise",
+      "email": "tom@gmail.com",
       "telephone": "1122332244",
-      "city": "Bangalore",
+      "city": "Dharwad",
       "state": "Karnataka",
       "country": "India",
       "pin": "580003"
     },
     {
       "id": 2,
-      "name" : "Berglunds snabbköp",
-      "email": "alfred@gmail.com",
-      "telephone": "1122332244",
+      "name" : "Brad Pit",
+      "email": "brad@gmail.com",
+      "telephone": "9900990099",
       "city": "Bangalore",
       "state": "Karnataka",
       "country": "India",
-      "pin": "580003"
+      "pin": "580001"
 
     },
     {
       "id": 3,
-      "name" : "Centro comercial Moctezuma",
-      "email": "alfred@gmail.com",
-      "telephone": "1122332244",
-      "city": "Bangalore",
+      "name" : "Angelina Julie",
+      "email": "julie@msn.com",
+      "telephone": "1122332298",
+      "city": "Mangalore",
       "state": "Karnataka",
       "country": "India",
-      "pin": "580003"
+      "pin": "568978"
     },
     {
       "id": 4,
-      "name" : "Ernst Handel",
-      "email": "alfred@gmail.com",
-      "telephone": "1122332244",
-      "city": "Bangalore",
-      "state": "Karnataka",
+      "name" : "shahrukh khan",
+      "email": "srk@gmail.com",
+      "telephone": "1234567899",
+      "city": "Mumbai",
+      "state": "Maharashtra",
       "country": "India",
-      "pin": "580003"
+      "pin": "887788"
     },
     {
       "id": 5,
-      "name" : "FISSA Fabrica Inter. Salchichas S.A.",
-      "email": "alfred@gmail.com",
-      "telephone": "1122332244",
-      "city": "Bangalore",
-      "state": "Karnataka",
+      "name" : "Salman Khan",
+      "email": "sallu@yahoo.com",
+      "telephone": "0022558899",
+      "city": "Mumbai",
+      "state": "Maharashtra",
       "country": "India",
-      "pin": "580003"
+      "pin": "887788"
     },
     {
       "id": 6,
-      "name" : "Alfreds Futterkiste",
-      "email": "alfred@gmail.com",
-      "telephone": "1122332244",
-      "city": "Bangalore",
+      "name" : "Madhuri Dixit",
+      "email": "madhuri@gmail.com",
+      "telephone": "7788778877",
+      "city": "Nagpur",
       "state": "Karnataka",
       "country": "India",
-      "pin": "580003"
+      "pin": "879875"
     },
     {
       "id": 7,
-      "name" : "Berglunds snabbköp",
-      "email": "alfred@gmail.com",
-      "telephone": "1122332244",
-      "city": "Bangalore",
-      "state": "Karnataka",
+      "name" : "Aishwarya Rai",
+      "email": "ash@gmail.com",
+      "telephone": "9999999999",
+      "city": "Mumbai",
+      "state": "Maharashtra",
       "country": "India",
-      "pin": "580003"
+      "pin": "887788"
 
     },
     {
       "id": 8,
-      "name": "Centro comercial Moctezuma",
-      "email": "alfred@gmail.com",
-      "telephone": "1122332244",
-      "city": "Bangalore",
-      "state": "Karnataka",
+      "name": "Amitabh Bachhan",
+      "email": "amitabh@gmail.com",
+      "telephone": "8888888888",
+      "city": "Mumbai",
+      "state": "Maharashtra",
       "country": "India",
-      "pin": "580003"
+      "pin": "887788"
     }
   ]
 }
