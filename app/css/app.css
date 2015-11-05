@@ -25,6 +25,7 @@
   flex-grow: 0.25;
   color: #fff;
   font-size: 26px;
+  text-decoration: none;
 }
 
 .cm-navbar .search {
@@ -100,7 +101,7 @@
 }
 
 .cm-cards {
-  padding: 0px 10px;
+  padding: 0px 30px;
 }
 
 
@@ -127,20 +128,42 @@
   -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 }
 
-.cm-card h5 {
-  color: #999;
-  font-weight: bold;
-}
-
 .cm-card-image {
   height: 50px;
 }
+
+.cm-list-name {
+  position: absolute;
+  left: 100px;
+  top: 30px;
+  color: #999;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 220px;
+}
+
+.cm-list-email {
+  position: absolute;
+  top: 65px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 275px;
+}
+
+.cm-list-phone {
+  position: absolute;
+  top: 85px;
+}
+
 
 .add-contact {
   right: 10px;
   position: fixed;
   width: 50px;
-  top: 60px;
+  top: 70px;
   cursor: pointer;
   height: 50px;
   border-radius: 50px;
@@ -156,4 +179,35 @@
   width: 100%;
   border-top: 1px solid #ddd;
   margin-bottom: 20px;
+}
+
+.cm-detail-body {
+  margin-left: 25%
+}
+
+.edit-contact .fa,
+.delete-contact .fa {
+  font-size: 18px;
+}
+
+.cm-card .fa {
+  color: rgba(71, 68, 68, 0.88);
+}
+
+.cm-list-other-details {
+  position: absolute;
+  top: 115px;
+  font-size: 12px;
+  color: #878787;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 265px;
+}
+
+.delete-contact {
+  position: absolute;
+  left: 287px;
+  float: right;
+  top: 110px;
 }

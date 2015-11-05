@@ -4,20 +4,19 @@
 
 var contactManagerControllers = angular.module('contactManagerControllers', []);
 
+
+//Controller to list all the contacts
 contactManagerControllers.controller('ContactListCtrl', function($scope, $rootScope, $modal, Contact) {
   function init() {
     Contact.query().success(function(result) {
       $scope.contacts = result.contacts;
       angular.forEach($scope.contacts, function(contact) {
-        contact.imageUrl = getRandomUrl();
+        contact.imageUrl = "img/" + imgNo++ % 6 + ".jpg";
       });
     });
   }
 
-  function getRandomUrl() {
-    return "img/" + imgNo++ % 6 + ".jpg";
-  }
-
+  // Method to search contacts by name and email
   $scope.searchContact = function (contact) {
     if ($scope.searchText == undefined || contact.name == undefined) {
       return true;
@@ -34,6 +33,7 @@ contactManagerControllers.controller('ContactListCtrl', function($scope, $rootSc
     $scope.searchText = newVal;
   });
 
+  // Instantiating detail view modal
   $scope.showContact = function(contact) {
     var modalInstance = $modal.open({
       templateUrl: 'html/contact-detail.html',
@@ -46,6 +46,7 @@ contactManagerControllers.controller('ContactListCtrl', function($scope, $rootSc
     });
   }
 
+  // Instantiating add-edit view modal
   $scope.addEditContact = function(contact) {
     var modalInstance = $modal.open({
       templateUrl: 'html/contact-addedit.html',
@@ -61,24 +62,43 @@ contactManagerControllers.controller('ContactListCtrl', function($scope, $rootSc
     });
   }
 
+  // Instantiating delete view modal
   $scope.deleteContact = function(contact) {
-    var idx = $scope.contacts.indexOf(contact);
-
-    if (idx != -1) {
-      $scope.contacts.splice(idx, 1);
-    }
+    var modalInstance = $modal.open({
+      templateUrl: 'html/contact-delete.html',
+      controller: 'ContactDeleteCtrl',
+      resolve: {
+        contacts: function() {
+          return $scope.contacts;
+        },
+        contact: function() {
+          return contact;
+        }
+      }
+    });
   }
 
-  init();
   var imgNo = 1;
+  init();
 });
 
+
+//Controller to show details of individual contact
+contactManagerControllers.controller('ContactDetailCtrl', function($scope, contact, $modalInstance) {
+  $scope.contact = contact;
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+});
+
+
+//Controller to add and edit contact
 contactManagerControllers.controller('ContactAddEditCtrl', function($scope, contacts, contact, $modalInstance) {
   $scope.contact = contact || {};
 
   $scope.addUpdateContact = function(isValid) {
     if (!isValid) {
-      alert("Form is invalid");
       return;
     }
 
@@ -100,15 +120,26 @@ contactManagerControllers.controller('ContactAddEditCtrl', function($scope, cont
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
-
 });
 
-contactManagerControllers.controller('ContactDetailCtrl', function($scope, contact, $modalInstance) {
+
+//Controller to delete individual contact
+contactManagerControllers.controller('ContactDeleteCtrl', function($scope, contacts, contact, $modalInstance) {
   $scope.contact = contact;
+
+  $scope.deleteContact = function() {
+    var idx = contacts.indexOf(contact);
+    if (idx != -1) {
+      contacts.splice(idx, 1);
+    }
+
+    $scope.cancel();
+  }
 
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
-
 });
+
+
 
