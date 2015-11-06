@@ -120,7 +120,6 @@
 }
 
 .cm-card:hover {
-  cursor: pointer;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
   -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 }
@@ -138,7 +137,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 220px;
+  max-width: 220px;
 }
 
 .cm-list-email {
@@ -147,7 +146,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 275px;
+  max-width: 275px;
 }
 
 .cm-list-phone {
@@ -182,9 +181,14 @@
   margin-left: 25%
 }
 
+.cm-card-detail {
+  cursor: pointer;
+}
+
 .edit-contact .fa,
 .delete-contact .fa {
   font-size: 18px;
+  cursor: pointer;
 }
 
 .cm-card .fa {

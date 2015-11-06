@@ -5,6 +5,7 @@
       <span ng-if="!!contact.id">Edit Contact</span>
     </span>
   </div>
+
   <div class="cm-modal-body">
     <form name="contactForm" class="form-horizontal" ng-submit="addUpdateContact(contactForm.$valid)" novalidate>
       <div class="clearfix form-group" ng-class="{ 'has-error' : contactForm.contactName.$invalid && !contactForm.ContactName.$pristine}">
