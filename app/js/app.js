@@ -19,5 +19,6 @@ contactManagerApp.config(['$routeProvider',
   }]);
 
 contactManagerApp.run(function($rootScope) {
+  // Used for searching contacts by name and email
   $rootScope.name = {value: ""};
 });

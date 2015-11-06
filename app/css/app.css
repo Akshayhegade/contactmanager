@@ -83,7 +83,6 @@
   padding: 8px 15px;
 }
 
-
 .cm-navbar-docked {
   position: fixed;
   top: 0px;
@@ -94,7 +93,6 @@
   flex-direction: column;
 }
 
-
 .view-container{
   position: absolute;
   top: 50px;
@@ -103,7 +101,6 @@
 .cm-cards {
   padding: 0px 30px;
 }
-
 
 .cm-card {
   height: 160px;
