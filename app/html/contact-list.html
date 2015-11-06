@@ -3,14 +3,14 @@
 </div>
 <div class="cm-cards">
 
-  <div class="cm-card" ng-repeat="contact in contacts  | filter:searchContact track by $index">
+  <div class="cm-card" ng-repeat="contact in contacts  | filter:searchContact track by $index" ng-click="showContact(contact)">
 
     <div class="pull-right edit-contact">
       <span class="fa fa-pencil" ng-click="addEditContact(contact); $event.stopPropagation()"></span>
     </div>
 
     <span>
-      <a ng-click="showContact(contact)"><img class="cm-card-image" ng-src="{{contact.imageUrl}}"></a>
+      <a><img class="cm-card-image" ng-src="{{contact.imageUrl}}"></a>
     </span>
 
     <div class="cm-card-detail" ng-click="showContact(contact)">
