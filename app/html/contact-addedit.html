@@ -12,7 +12,7 @@
         <label class="col-xs-3 control-label">Name</label>
         <div class="col-xs-9">
           <input type="text" name="contactName" ng-model="contact.name" class="form-control"
-            placeholder="Full Name" required ng-maxlength="255">
+            placeholder="Full Name" required ng-maxlength="255" autofocus>
           <p ng-show="contactForm.contactName.$invalid && !contactForm.contactName.$pristine" class="help-block">
             Name is required
           </p>
