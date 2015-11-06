@@ -33,7 +33,8 @@
         <label class="col-xs-3 control-label">Telephone Number</label>
         <div class="col-xs-9">
           <input type="text" name="telephone" ng-model="contact.telephone" class="form-control"
-            placeholder="Telephone Number" ng-minlength="10" ng-maxlength="15">
+            ng-pattern="/^\d+$/"  placeholder="Telephone Number" ng-minlength="10" ng-maxlength="15">
+          <p ng-show="contactForm.telephone.$error.pattern" class="help-block">Not a valid number!</p>
           <p ng-show="contactForm.telephone.$error.minlength" class="help-block">Telephone number is too short(length should be between 10 and 15)</p>
           <p ng-show="contactForm.telephone.$error.maxlength" class="help-block">Telephone number is too long (length should be between 10 and 15)</p>
         </div>
