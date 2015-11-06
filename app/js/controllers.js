@@ -95,7 +95,9 @@ contactManagerControllers.controller('ContactDetailCtrl', function($scope, conta
 
 //Controller to add and edit contact
 contactManagerControllers.controller('ContactAddEditCtrl', function($scope, contacts, contact, $modalInstance) {
-  $scope.contact = contact || {};
+  // Contact for making changes, do not alter the original contact
+  // Else, cancel also works as update !! 
+  $scope.contact = angular.copy(contact) || {};
 
   $scope.addUpdateContact = function(isValid) {
     if (!isValid) {
@@ -104,6 +106,7 @@ contactManagerControllers.controller('ContactAddEditCtrl', function($scope, cont
 
     if ($scope.contact.id != undefined) {
       $scope.updateContact();
+      return;
     }
 
     contacts.push($scope.contact);
@@ -114,6 +117,12 @@ contactManagerControllers.controller('ContactAddEditCtrl', function($scope, cont
 
   $scope.updateContact = function() {
   // This method is added, so that in the real time application http patch can be called.
+    var idx = contacts.indexOf(contact);
+    if (idx != -1) {
+      contacts.splice(idx, 1);
+      contacts.push($scope.contact)
+    }
+
     $scope.cancel();
   }
 
