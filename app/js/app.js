@@ -6,7 +6,8 @@ var contactManagerApp = angular.module('contactManagerApp', [
   'ngRoute',
   'ui.bootstrap',
   'contactManagerControllers',
-  'contactManagerServices'
+  'contactManagerServices',
+  'contact.manager.card'
 ]);
 
 contactManagerApp.config(['$routeProvider',
